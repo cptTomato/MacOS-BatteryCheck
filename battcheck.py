@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pandas import Series, DataFrame
 
-runde = True
 meinPlot = []
 
 
