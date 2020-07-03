@@ -1,3 +1,5 @@
+
+#Modules
 import os
 from openpyxl import load_workbook
 import time
@@ -5,9 +7,15 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pandas import Series, DataFrame
 
+#creating the list
 meinPlot = []
 
 
+# processs to capture the data
+# creating the csv (database) and catching the data with terminal commands
+# writing data ind the csv
+# waiting 30 seconds and sending infos, that it is still working
+# rewind that until range in for is over
 
 for p in range(0,60):
     akkuMon = str(os.popen("pmset -g batt").read())
@@ -25,10 +33,10 @@ for p in range(0,60):
     time.sleep(30)
     print("more Data nomnomnom")
     
-
+# ploting and saving your data
 plt.plot(meinPlot)
 plt.show()
 plt.savefig("AkkuLeistung.png")
 
-
+# finish line
 print("done")
